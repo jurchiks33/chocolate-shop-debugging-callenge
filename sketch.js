@@ -49,7 +49,7 @@ function setup() {
 	for (var i = 0; i < lines.length; i++) {
 		var l = lines[i]
 
-		shopStock.addStock(l.name, l.imageFile, l.weight, l.price, l.quantity,
+		shopStock.addStock(l.name, images[i], l.weight, l.price, l.quantity,
 			display);
 		display.x += display.width + 30;
 	}
