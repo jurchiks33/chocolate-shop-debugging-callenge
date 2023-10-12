@@ -33,6 +33,14 @@ var lines = [{
 	}
 ];
 
+function preload() 
+	{
+		for (var i = 0; i < lines.length; i++)
+		{
+			images[i] = loadImage(lines[i].imageFile);
+		}
+	}
+
 function setup() {
 	createCanvas(800, 600);
 
@@ -57,13 +65,7 @@ function setup() {
 	//create a basket
 	basket = new Basket();
 
-	function preload() 
-	{
-		for (var i = 0; i < lines.length; i++)
-		{
-			images[i] = loadImage(lines[i].imageFile);
-		}
-	}
+	
 
 }
 
@@ -179,15 +181,15 @@ function ChocolateBar(name, image, weight, price, display) {
 	//also display the price and price per 100grams
 	this.draw = function() {
 		image(this.image, this.display.x, this.display.y, this.display.width,
-			this.display.height);
+			  this.display.height);
 		var pricePer100g = price / weight * 100;
 		var priceString = "£" + price + "p ( £" + pricePer100g +
-			"p per 100 grams)";
+		  "p per 100 grams)";
 		textAlign(CENTER);
 		fill(0);
 		text(priceString, this.display.x + this.display.width / 2,
-			this.display.y + this.display.height + 30);
-	}
+			 this.display.y + this.display.height + 30);
+	  }
 
 	//was the chocolate bar clicked. If so return true false otherwise
 	this.wasClicked = function(x, y) {
