@@ -1,5 +1,6 @@
 var shopStock;
 var basket;
+var images = [];
 
 //This literal will be used to build the objects in the sketch
 var lines = [{
@@ -55,6 +56,14 @@ function setup() {
 
 	//create a basket
 	basket = new Basket();
+
+	function preload() 
+	{
+		for (var i = 0; i < lines.length; i++)
+		{
+			images[i] = loadImage(lines[i].imageFile);
+		}
+	}
 
 }
 
