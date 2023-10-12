@@ -166,10 +166,10 @@ function Stock() {
 //weight and price are numbers and display is an object storing x,y,width and height
 //properties
 
-function ChocolateBar(name, imageFile, weight, price, display) {
+function ChocolateBar(name, image, weight, price, display) {
 	this.name = name;
 	//load image from file path
-	this.image = loadImage(imageFile);
+	this.image = image;
 	this.weight = weight;
 
 	this.price = price;
