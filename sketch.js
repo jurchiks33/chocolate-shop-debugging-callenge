@@ -46,7 +46,7 @@ function setup() {
 		};
     
 	for (var i = 0; i < lines.length; i++) {
-		var 1 = lines[i]
+		var l = lines[i]
 
 		shopStock.addStock(l.name, l.imageFile, l.weight, l.price, l.quantity,
 			display);
@@ -100,7 +100,7 @@ function mousePressed() {
 
 function Stock() {
 	//an array to hold the stock
-	this.stock;
+	this.stock = [];
 
 	//add a chocolate bar to the array each item has a chocolate bar object and a
 	//quantity
