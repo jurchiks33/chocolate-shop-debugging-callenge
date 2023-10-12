@@ -169,7 +169,7 @@ function ChocolateBar(name, imageFile, weight, price, display) {
 	//draw the chocolate bars image to the values set in the display object
 	//also display the price and price per 100grams
 	this.draw = function() {
-		image(image, this.display.x, this.display.y, this.display.width,
+		image(this.image, this.display.x, this.display.y, this.display.width,
 			this.display.height);
 		var pricePer100g = price / weight * 100;
 		var priceString = "£" + price + "p ( £" + pricePer100g +
