@@ -45,8 +45,8 @@ function setup() {
 			height: 400,
 		};
     
-	for (var i = 0; i < lines.length i++) {
-		var l = lines[i]
+	for (var i = 0; i < lines.length; i++) {
+		var 1 = lines[i]
 
 		shopStock.addStock(l.name, l.imageFile, l.weight, l.price, l.quantity,
 			display);
